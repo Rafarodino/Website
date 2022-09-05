@@ -13,7 +13,7 @@
         <!--Lista para organizar links-->
         <ul>
             <li>
-                <a href="#Hobbys">Hobbys</a>
+                <a href="#Hobbys">Hobbies</a>
             </li>
             <li>
               <a href="#Contato">Contato</a>
@@ -41,7 +41,7 @@
                 
                 <div class="sections"> 
                  <section>
-                    <h2><a name="Hobbys" id="Hobbys" ></a>Hobbys</h2>
+                    <h2><a name="Hobbys" id="Hobbys" ></a>Hobbies</h2>
                     <p>Um dos meus principais hobbys é a musculação, onde me conecto comigo mesmo e me ajuda em muitos aspectos da minha vida.</p>
                     <p>Além da musculução, gosto muito de ler, jogar online e participar de partidas de futebol, além de ter afinidade com tecnologia de modo geral e por isso prático diariamente com muito prazer, seja no trabalho (Suporte TI) ou em meu tempo livre (estudante de programação)</p>
                  </section>
@@ -58,8 +58,69 @@
                             
                  </section>
                  <section>
-                    <h2><a name="Projetos" id="Projetos" ></a>Portfólio</h2>
-                    <p>Exercício feito em javascript, onde o objetivo é registrar as cidades visitas e no final (a partir do momento em que a resposta for Não) exibe cada uma das cidades escritas pelo usuário além da quantidade de locais visitados: <a href=#>Exercício Javascript</a> </p>
+                    <h2><a name="Projetos" id="Projetos" ></a>Projetos</h2>
+                    <p>Exercício feito em javascript, onde o objetivo é registrar as cidades visitas e no final (a partir do momento em que a resposta for Não) exibe cada uma das cidades escritas pelo usuário além da quantidade de locais visitados: <div class="jvsbutoon"><button type="button" onclick="exercicio()">Clique Aqui</button></div> </p>
+                    <script>
+                        function exercicio (){
+                            let nameTurist = prompt ("Seja bem-vindo turista, me informe seu nome abaixo, por favor");
+let cityTurist = prompt ("Você já visitou alguma cidade? \n1-Sim \n2-Não");
+let cityNames = ''
+let contador = 0
+while (cityTurist ==="1") {
+ let cityName = prompt ("Qual cidade?");
+ //Cidades = cidades + ...
+ cityNames += "\n - " + cityName + "\n" 
+
+ contador = contador +1;
+ cityTurist = prompt ("Você já visitou alguma cidade? \n1-Sim \n2-Não");
+    
+    
+}
+
+alert (nameTurist + "\n\nNúmero de cidades visitas: "+"\n"+ contador + " \nNome das cidades: " + "\n"+ cityNames)
+                        }
+                    </script>
+
+                    <p>Exercício feito em javascript, onde o objetivo é dois personagens disputarem entre Poder de Ataque e Defesa, onde a defesa conta com elementos como escudo, pontos de vida e pontos de defesa (todos o usuário pode escolher: <div class="jvsbutoon2"><button type="button" onclick="exercicio2()">Clique Aqui</button></div></p>
+                    <script>
+                        function exercicio2(){
+                            // nome e o poder de ataque de um personagem
+ //depois o nome, a quantidade de pontos de vida, o poder de defesa de outro personagem e se ele possui um escudo
+
+ let nameCharacter = prompt ("Qual o nome do personagem?");
+ let adCharacter = prompt ("Qual o poder de ataque do personagem?");
+ let nameCharacterTwo = prompt ("Qual o nome do segundo personagem?");
+ let tankCharacter = prompt ("Qual o poder de defesa do segundo personagem?");
+ let lifeCharacter = prompt ("Qual a quantidade de pontos de vida do segundo personagem?");
+ let shieldCharacter = prompt ("O personagem possui escudo? (Sim/Não)");
+ let damage = 0
+
+ //Se o poder de ataque for maior do que a defesa e o defensor não possuir um escudo, 
+ //o dano causado será igual a diferença entre o ataque e a defesa.
+
+ if (adCharacter > tankCharacter && shieldCharacter === "Não") {
+  damage = adCharacter - tankCharacter}
+//Se o poder de ataque for maior do que a defesa e o defensor possuir um escudo, 
+//o dano causado será igual a metade da diferença entre o ataque e a defesa.
+else if (adCharacter > tankCharacter && shieldCharacter ==="Sim"){
+    damage = (adCharacter - tankCharacter) /2
+//Se o poder de ataque for menor ou igual a defesa, o dano causado será 0
+
+}
+
+ else 
+     if (adCharacter <= tankCharacter) {
+         damage = 0
+     } 
+
+     let info = lifeCharacter - damage
+
+     alert (nameCharacter + " causou "+ damage + " Pontos de dano em " + nameCharacterTwo)
+     alert (nameCharacter + "\nPoder de ataque: "+ adCharacter + "\n\n"+ nameCharacterTwo + "\nPontos de vida: "+ info + "\nPoder de defesa: "+tankCharacter+ "\nPossui escudo: "+ shieldCharacter)
+
+
+                        }
+                    </script>
                     <section>
                 
                  </section>
